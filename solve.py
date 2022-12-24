@@ -1,7 +1,12 @@
-# url: https://www.codewars.com/kata/54da5a58ea159efa38000836/train/python
-# problem: 1_findOdd.py
+# url: https://www.codewars.com/kata/58f5c63f1e26ecda7e000029/train/python
+# problem: 2_mexicanWave.py
 
-def find_it(seq):
-  for i in set(seq):
-    if seq.count(i) % 2 != 0:
-      return i
+def wave(text):
+  if len(text) == 0:
+    return []
+  waveList= []
+  for i in range(len(text)):
+    if text[i] == " ":
+      continue
+    waveList.append(text[0:i] + text[i].upper() + text[i+1:])
+  return waveList
